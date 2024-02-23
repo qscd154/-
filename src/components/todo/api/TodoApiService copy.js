@@ -16,3 +16,6 @@ export const retrieveAllTodosForUsername
 
 export const deleteTodoApi
         = (username,id) => apiClient.delete(`/users/${username}/todos/${id}`)
+
+export const retrieveTodoApi
+        = (username,id) => apiClient.get(`/users/${username}/todos/${id}`)
