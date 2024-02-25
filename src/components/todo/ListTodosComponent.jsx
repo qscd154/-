@@ -3,6 +3,7 @@ import { retrieveAllTodosForUsername, deleteTodoApi } from "./api/TodoApiService
 import { useAuth } from "./security/AuthContext"
 import { useNavigate } from "react-router-dom";
 
+
 function ListTodoComponent() {
 
     const today = new Date();
@@ -32,7 +33,7 @@ function ListTodoComponent() {
         .then(
 
             () => {
-                setMessage(`id가 ${id}인 할일을 성공적으로 삭제했습니다.`)
+                setMessage(`${id} delete success.`)
                 refreshTodos()
             }
 
@@ -48,7 +49,7 @@ function ListTodoComponent() {
     return (
         <div className="container">
             <h1>Things You Want To Do!</h1>
-            {message && <div className="alert alert-warning">{message}</div>}
+            {message && <div className="alert alert-warning">{message}</div>}            
             <div>
 
                 <table className='table'>
