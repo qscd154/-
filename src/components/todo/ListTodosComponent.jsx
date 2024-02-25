@@ -42,8 +42,11 @@ function ListTodoComponent() {
     }
 
     function updateTodo(id) {
-        console.log('clicked' + id)
         navigate(`/todo/${id}`)
+    }
+
+    function addNewtodo() {
+        navigate(`/todo/-1`)
     }
 
     return (
@@ -85,6 +88,9 @@ function ListTodoComponent() {
 
                 </table>
 
+            </div>
+            <div className="btn btn-success m-3" onClick={addNewtodo}>
+                    할 일 추가
             </div>
         </div>
     )
