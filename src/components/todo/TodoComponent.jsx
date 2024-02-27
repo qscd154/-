@@ -68,10 +68,9 @@ export default function TodoComponent() {
             erros.description = '5글자 이상 입력하세요.'
         }
 
-        if(values.targetDate == null||values.targetDate == '' || moment(values.targetDate).isValid()) {
+        if(values.targetDate == null || values.targetDate == '' || !moment(values.targetDate).isValid()) {
             erros.targetDate = '목표 날짜를 입력하세요.'
         }
-
 
         console.log(values)
         return erros
